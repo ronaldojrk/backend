@@ -2,6 +2,7 @@ const express = require ('express');
 const mongoose = require ('mongoose');
 const routes =require('./routes');
 
+
 const app = express();
 mongoose.connect('mongodb+srv://app:app@mylist-z3tgc.mongodb.net/test?retryWrites=true&w=majority',{
   useNewUrlParser:true,
@@ -17,4 +18,4 @@ mongoose.connect('mongodb+srv://app:app@mylist-z3tgc.mongodb.net/test?retryWrite
 app.use(express.json());
 app.use(routes);
 
-app.listen(3333);
+app.listen(process.env.PORT ||3000);
