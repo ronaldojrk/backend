@@ -15,7 +15,6 @@ routes.post('/sessions',SessionController.store);
 
 
 routes.get('/livros',LivroController.index);
-
 routes.post('/livros',upload.single('image'),LivroController.store);
 
 routes.get('/login',LoginController.show);
