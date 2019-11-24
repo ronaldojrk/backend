@@ -4,7 +4,7 @@ const routes =require('./routes');
 const cors = require('cors');
 
 const app = express();
-mongoose.connect('mongodb+srv://app:app@mylist-z3tgc.mongodb.net/test?retryWrites=true&w=majority',{
+mongoose.connect('mongodb+srv://app:app@mylist-z3tgc.mongodb.net/test?retryWrites=true&w=majority', {
   useNewUrlParser:true,
   useUnifiedTopology:true,
 })
