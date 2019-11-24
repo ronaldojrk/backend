@@ -3,8 +3,9 @@ const User = require ('../models/User');
 module.exports = {
 
   async index(req,res){
-    const {tech}= req.query;
-    const livros = await Livro.find({ tipos:tech });
+    //const {tech}= req.query;
+    //const livros = await Livro.find({ tipos:tech });
+    const livros = await Livro.find();   
     
     return res.json(livros);
 
@@ -24,7 +25,7 @@ module.exports = {
       return res.status(400).json({error : 'user does not existes'})
     }
 
-    const livro = await Sport.create({
+    const livro = await Livro.create({
       user:user_id,
       image:filename,
       nome,

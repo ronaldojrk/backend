@@ -10,7 +10,9 @@ const PlaylivroController =require('./controllers/PlaylivroController');
 const routes = express.Router();
 const upload = multer(uploadConfig);
 
+routes.get('/sessions',SessionController.index);
 routes.post('/sessions',SessionController.store);
+
 
 routes.get('/livros',LivroController.index);
 
